@@ -23,20 +23,27 @@
 <style>
   /* ---- тема: шесть цветов, два шрифта --------------------------------- */
   .v-page {
-    --v-canvas: #0b0d11; --v-surface: #141821;
-    --v-ink: #f1ede4; --v-ink-soft: #9d9a92;
-    --v-accent: #f2a93b; --v-accent-ink: #16110a;
+    --v-canvas: #eef0f2; --v-surface: #ffffff;
+    --v-ink: #14181f; --v-ink-soft: #566070;
+    --v-accent: #b86a00; --v-accent-ink: #ffffff;
     --v-font-display: "Unbounded", "Arial Black", system-ui, sans-serif;
     --v-font-text: "Manrope", "Segoe UI", system-ui, sans-serif;
-    --v-shadow-color: 4 6 12;
+    --v-shadow-color: 30 40 60;
+  }
+
+  /* тёмные «обложки» на фото: текст светлый, как раньше */
+  .scene-dark, .bar:not(.is-scrolled) {
+    --v-ink: #f1ede4; --v-ink-soft: #b9b6ae; --v-accent: #f2a93b; --v-accent-ink: #16110a;
+    --v-hair: rgb(241 237 228 / .16); --v-hair-strong: rgb(241 237 228 / .3);
+    color: var(--v-ink);
   }
 
   /* ---- шапка: при скролле подложка, чтобы текст не просвечивал ----------- */
   .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between;
     padding: var(--v-3) var(--v-gutter); gap: var(--v-4);
-    background: linear-gradient(to bottom, rgb(11 13 17 / .85), rgb(11 13 17 / 0));
+    background: linear-gradient(to bottom, rgb(11 13 17 / .7), rgb(11 13 17 / 0));
     transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
-  .bar.is-scrolled { background: rgb(11 13 17 / .78); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  .bar.is-scrolled { background: rgb(238 240 242 / .86); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
     box-shadow: 0 1px 0 var(--v-hair); }
   .bar__mark { font-family: var(--v-font-display); font-weight: 700; font-size: var(--v-t-sm); letter-spacing: .02em; text-decoration: none;
     display: inline-flex; align-items: center; gap: .55em; min-height: 44px; white-space: nowrap; }
@@ -49,7 +56,7 @@
     .bar__right { gap: var(--v-2); }
     .bar__mark { font-size: .85rem; }
   }
-  @media (max-width: 860px) { .bar.is-scrolled { background: rgb(11 13 17 / .96); } }
+  @media (max-width: 860px) { .bar.is-scrolled { background: rgb(238 240 242 / .97); } }
 
   /* ---- hero: три плана ---------------------------------------------------- */
   /* img внутри <picture>: селектор движка .v-layer > img не достаёт, позиционируем сами */
@@ -66,6 +73,7 @@
   .hero__copy .v-display { font-size: var(--v-t-3xl); line-height: .98; }
   .hero__floor { position: absolute; inset: auto 0 0 0; height: 34%; z-index: 2; pointer-events: none;
     background: linear-gradient(to top, var(--v-canvas) 0%, rgb(11 13 17 / .6) 45%, transparent 100%); }
+  .hero__floor { background: linear-gradient(to top, #0b0d11 0%, rgb(11 13 17 / .6) 45%, transparent 100%); }
   .hero__copy { bottom: clamp(4rem, 14vh, 10rem); max-width: min(42rem, 88vw); }
   .hero__copy .v-lede { margin-top: var(--v-5); color: var(--v-ink); opacity: .9; }
   .hero__cta { display: flex; flex-wrap: wrap; gap: var(--v-3); margin-top: var(--v-6); }
@@ -95,7 +103,7 @@
   .season__copy .v-body b { color: var(--v-ink); font-weight: 600; }
   .season__thr { align-self: center; justify-self: end; text-align: right; }
   .season__thr .big { font-family: var(--v-font-display); font-weight: 700; font-size: clamp(5rem, 12vw, 11rem); line-height: .9; letter-spacing: -.04em;
-    color: transparent; -webkit-text-stroke: 2px rgb(242 169 59 / .55); display: block; }
+    color: transparent; -webkit-text-stroke: 2px rgb(184 106 0 / .6); display: block; }
   .season__thr .v-label { display: block; margin-top: var(--v-3); }
   .season .scale { grid-column: 1 / -1; }
   .season__after { grid-column: 1 / -1; padding-top: var(--v-5); display: flex; justify-content: flex-end; }
@@ -110,9 +118,9 @@
   .scale__months li.is-past::before { background: var(--v-accent); }
   .scale__mark { position: absolute; top: 2.25rem; left: calc(var(--edge) + var(--v-p, 0) * (100% - 2 * var(--edge))); width: 2.6rem; height: 2.6rem; margin: -1.3rem 0 0 -1.3rem;
     border-radius: 50%; border: .45rem solid var(--v-accent); background: var(--v-canvas);
-    box-shadow: 0 0 0 .35rem var(--v-canvas), 0 8px 24px rgb(242 169 59 / .35);
+    box-shadow: 0 0 0 .35rem var(--v-canvas), 0 8px 24px rgb(184 106 0 / .3);
     transform: rotate(calc(var(--v-p, 0) * 720deg)); }
-  .scale__mark::after { content: ""; position: absolute; inset: .3rem; border-radius: 50%; border: 1px dashed rgb(242 169 59 / .6); }
+  .scale__mark::after { content: ""; position: absolute; inset: .3rem; border-radius: 50%; border: 1px dashed rgb(184 106 0 / .6); }
   @media (max-width: 860px) {
     .season { grid-template-columns: 1fr; grid-template-rows: 1fr auto auto auto; padding: clamp(4rem, 10vh, 6rem) var(--v-gutter) clamp(2rem, 6vh, 4rem); }
     .season__thr { justify-self: start; text-align: left; align-self: end; padding-bottom: var(--v-4); display: flex; align-items: baseline; gap: var(--v-4); flex-wrap: wrap; }
@@ -143,7 +151,7 @@
   .services__list .price small { display: block; font-family: var(--v-font-text); font-weight: 500; font-size: var(--v-t-xs); color: var(--v-ink-soft); letter-spacing: 0; }
   .services__fig { position: relative; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2), var(--v-edge); aspect-ratio: 3 / 4; position: sticky; top: var(--v-8); }
   .services__fig img { width: 100%; height: 100%; object-fit: cover; }
-  .services__fig figcaption { position: absolute; left: var(--v-5); bottom: var(--v-5); right: var(--v-5); font-size: var(--v-t-sm); color: var(--v-ink); z-index: 1; }
+  .services__fig figcaption { position: absolute; left: var(--v-5); bottom: var(--v-5); right: var(--v-5); font-size: var(--v-t-sm); color: #f1ede4; z-index: 1; }
   .services__fig::after { content: ""; position: absolute; inset: auto 0 0 0; height: 55%; background: linear-gradient(to top, rgb(0 0 0 / .85), rgb(0 0 0 / .4) 50%, transparent); }
   @media (max-width: 860px) {
     .services { grid-template-columns: 1fr; gap: var(--v-7); }
@@ -193,7 +201,7 @@
 
   /* ---- финал: запись без звонка ------------------------------------------------ */
   .close { min-height: 100svh; display: grid; grid-template-rows: 1fr auto; padding: clamp(6rem, 14vh, 9rem) var(--v-gutter) 0;
-    background: radial-gradient(60rem 40rem at calc(var(--v-mx, .5) * 100%) calc(var(--v-my, .5) * 100%), rgb(242 169 59 / .22), transparent 60%); }
+    background: radial-gradient(60rem 40rem at calc(var(--v-mx, .5) * 100%) calc(var(--v-my, .5) * 100%), rgb(242 169 59 / .28), transparent 60%); }
   .close__inner { align-self: center; display: grid; grid-template-columns: 1.25fr .75fr; gap: var(--v-9); align-items: start; padding-bottom: var(--v-9); }
   .close__inner .v-display { margin-bottom: var(--v-6); }
   .book { display: grid; grid-template-columns: 1fr 1fr auto; gap: var(--v-3); align-items: end; }
@@ -208,7 +216,7 @@
     background-repeat: no-repeat; background-position: right 1em center; background-size: 1.1em; }
   .book select:invalid { color: var(--v-ink-soft); }
   .book select option { color: var(--v-ink); background: var(--v-surface); }
-  .book input:focus, .book select:focus { border-color: var(--v-accent); box-shadow: 0 0 0 3px rgb(242 169 59 / .18); }
+  .book input:focus, .book select:focus { border-color: var(--v-accent); box-shadow: 0 0 0 3px rgb(184 106 0 / .22); }
   .book button.v-btn { min-height: 3.25rem; padding: 0 1.6em; background: var(--v-accent); color: var(--v-accent-ink); border: 0; box-shadow: var(--v-e1); }
   .book__note { grid-column: 1 / -1; font-size: var(--v-t-sm); color: var(--v-ink-soft); margin-top: var(--v-1); }
   .book__alt { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-3); margin-top: var(--v-6); }
@@ -244,7 +252,7 @@
   <main id="top">
 
     <!-- 1 · УЗНАВАНИЕ: hero из трёх планов -->
-    <section data-v-act="pin" data-v-span="2.6" data-v-drift="#0b0d11" aria-label="Шиномонтаж к своему времени">
+    <section class="scene-dark" data-v-act="pin" data-v-span="2.6" data-v-drift="#0b0d11" aria-label="Шиномонтаж к своему времени">
       <div data-v-stage>
         <div class="v-layer hero__back" data-v-parallax="-0.9">
           <picture>
@@ -279,7 +287,7 @@
     </section>
 
     <!-- 2 · НАПРЯЖЕНИЕ: сезонная шкала (фирменный ход) -->
-    <section data-v-act="pin" data-v-span="2.4" data-v-drift="#0e1219" id="sezon" aria-label="Когда переобуваться">
+    <section data-v-act="pin" data-v-span="2.4" data-v-drift="#e6e9ee" id="sezon" aria-label="Когда переобуваться">
       <div data-v-stage>
         <div class="season">
           <div class="season__copy">
@@ -319,7 +327,7 @@
     </section>
 
     <!-- 3 · ВЫБОР: услуги и цены -->
-    <section class="v-section" data-v-act="flow" data-v-drift="#0b0d11" id="ceny" aria-label="Услуги и цены">
+    <section class="v-section" data-v-act="flow" data-v-drift="#eef0f2" id="ceny" aria-label="Услуги и цены">
       <div class="v-wrap services">
         <div class="v-stack" data-v-in data-v-stagger="60">
           <h2 class="v-display v-display--lg">Цены на основные услуги</h2>
@@ -341,7 +349,7 @@
     </section>
 
     <!-- 5 · ДОВЕРИЕ: отзывы с Яндекс.Карт (только настоящие, слоты) -->
-    <section class="v-section" data-v-act="flow" data-v-drift="#0b0d11" id="otzyvy" aria-label="Отзывы с Яндекс.Карт">
+    <section class="v-section" data-v-act="flow" data-v-drift="#eef0f2" id="otzyvy" aria-label="Отзывы с Яндекс.Карт">
       <div class="v-wrap reviews">
         <div class="reviews__head" data-v-in data-v-stagger="60">
           <h2 class="v-display v-display--md">Что пишут на Яндекс Картах</h2>
@@ -371,7 +379,7 @@
     </section>
 
     <!-- 6 · ОБЕЩАНИЕ: гарантии -->
-    <section class="v-section" data-v-act="flow" data-v-drift="#0d1016" aria-label="Что обещаем">
+    <section class="v-section" data-v-act="flow" data-v-drift="#e9ecef" aria-label="Что обещаем">
       <div class="v-wrap promise">
         <figure class="promise__fig" data-v-reveal="left" data-v-reveal-at="0.15 0.5">
           <img src="assets/hands.webp" alt="Мастер за работой с шиной" width="1920" height="1067" loading="lazy" decoding="async">
@@ -389,7 +397,7 @@
     </section>
 
     <!-- 7 · ДЕЙСТВИЕ: запись без звонка -->
-    <section data-v-act="flow" data-v-drift="#0b0d11" id="zapis" aria-label="Записаться">
+    <section data-v-act="flow" data-v-drift="#eef0f2" id="zapis" aria-label="Записаться">
       <div class="close" data-v-spotlight>
         <div class="close__inner">
           <div data-v-in data-v-stagger="80">
