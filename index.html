@@ -4,21 +4,47 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow" data-publish>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Шиномонтаж на Пушкина, Майкоп · цены и отзывы</title>
+<title>Шиномонтаж «Пушка» в Майкопе, ул. Пушкина, 113 · цены и отзывы</title>
+<link rel="canonical" href="https://sabailov2-source.github.io/shinomontazh-maykop/">
+<meta property="og:url" content="https://sabailov2-source.github.io/shinomontazh-maykop/">
+<meta name="theme-color" content="#0b0d11">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Шиномонтаж «Пушка»",
+  "url": "https://sabailov2-source.github.io/shinomontazh-maykop/",
+  "telephone": "+79182294034",
+  "image": "https://sabailov2-source.github.io/shinomontazh-maykop/assets/client/photo1.jpg",
+  "priceRange": "от 140 ₽",
+  "paymentAccepted": "Наличные, банковские карты",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Пушкина, 113",
+    "addressLocality": "Майкоп",
+    "addressRegion": "Республика Адыгея",
+    "addressCountry": "RU"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.599155, "longitude": 40.119919 },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "143" },
+  "sameAs": ["https://t.me/Maykop_Pushka", "https://yandex.ru/maps/org/208875775456"]
+}
+</script>
 <meta name="description" content="Шиномонтаж в Майкопе, ул. Пушкина, 113: шиномонтаж от 250 ₽, балансировка от 140 ₽, правка и прокатка дисков. Рейтинг 5.0 на Яндекс Картах, 143 отзыва.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Шиномонтаж на Пушкина">
 <meta property="og:title" content="Шиномонтаж в центре Майкопа">
 <meta property="og:description" content="Ул. Пушкина, 113. Шиномонтаж от 250 ₽, балансировка от 140 ₽. Рейтинг 5.0 на Яндекс Картах.">
-<meta property="og:image" content="assets/og.jpg">
+<meta property="og:image" content="https://sabailov2-source.github.io/shinomontazh-maykop/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 860px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2711%27 fill=%27none%27 stroke=%27%23f2a93b%27 stroke-width=%276%27/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="assets/client/logo.png">
+<link rel="apple-touch-icon" href="assets/client/logo.png">
 <link rel="stylesheet" href="vibe.css">
 <style>
   /* ---- тема: шесть цветов, два шрифта --------------------------------- */
@@ -50,6 +76,31 @@
     .bar__mark { font-size: .85rem; }
   }
   @media (max-width: 860px) { .bar.is-scrolled { background: rgb(11 13 17 / .96); } }
+
+  /* логотип заказчика: на светлой круглой подложке, т.к. исходник чёрный на белом */
+  .bar__logo { width: 2.2rem; height: 2.2rem; border-radius: 50%; background: #fff; object-fit: cover; flex: none; }
+  .bar__mark i { display: none; }
+  .btn-tg { background: #2aabee !important; color: #fff !important; border: 0; }
+  .btn-tg svg { width: 1.15em; height: 1.15em; margin-right: .5em; flex: none; }
+  .v-btn { display: inline-flex; align-items: center; justify-content: center; }
+
+  /* плавающая кнопка Telegram + нижняя панель на телефоне */
+  .fab-tg { position: fixed; right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 40;
+    min-height: 3.4rem; padding: 0 1.3rem; border-radius: 999px; background: #2aabee; color: #fff; text-decoration: none; font-weight: 700;
+    display: inline-flex; align-items: center; gap: .6rem; box-shadow: 0 10px 30px rgb(0 0 0 / .45); }
+  .fab-tg svg { width: 1.4rem; height: 1.4rem; }
+  @media (max-width: 700px) {
+    .fab-tg { left: 1rem; right: 1rem; justify-content: center; }
+    .fab-call { display: inline-flex; }
+    body { padding-bottom: 5rem; }
+  }
+  .fab-call { display: none; }
+
+  /* фото заказчика: лента на финале */
+  .shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--v-3); margin-top: var(--v-7); }
+  .shots figure { border-radius: var(--v-radius); overflow: hidden; aspect-ratio: 3 / 4; box-shadow: var(--v-e1); }
+  .shots img { width: 100%; height: 100%; object-fit: cover; }
+  @media (max-width: 860px) { .shots { grid-template-columns: repeat(2, 1fr); } }
 
   /* ---- hero: три плана ---------------------------------------------------- */
   /* img внутри <picture>: селектор движка .v-layer > img не достаёт, позиционируем сами */
@@ -233,11 +284,11 @@
   <div class="v-grain" aria-hidden="true"></div>
 
   <header class="bar">
-    <a class="bar__mark" href="#top"><i aria-hidden="true"></i>Шиномонтаж</a>
+    <a class="bar__mark" href="#top"><img class="bar__logo" src="assets/client/logo.png" alt="" width="36" height="36"><i aria-hidden="true"></i>Шиномонтаж «Пушка»</a>
     <nav class="bar__right" aria-label="Быстрые ссылки">
-      <a class="bar__tel" href="tel:+79182294034">+7 918 229-40-34</a>
+      <a class="bar__tel" href="tel:+79182294034" data-log="call_header">+7 918 229-40-34</a>
       <a class="v-btn v-btn--ghost" href="#ceny">Цены</a>
-      <a class="v-btn" href="#zapis">Контакты</a>
+      <a class="v-btn btn-tg" href="https://t.me/Maykop_Pushka" target="_blank" rel="noopener" data-log="telegram_header">Telegram</a>
     </nav>
   </header>
 
@@ -271,7 +322,8 @@
           <h1 class="v-display v-display--xl" data-v-kinetic="lines">Шиномонтаж в центре Майкопа.</h1>
           <p class="v-lede">Балансировка, правка и прокатка дисков. Рейтинг 5.0 на Яндекс Картах.</p>
           <div class="hero__cta">
-            <a class="v-btn" href="tel:+79182294034">Позвонить</a>
+            <a class="v-btn" href="tel:+79182294034" data-log="call_hero">Позвонить</a>
+            <a class="v-btn btn-tg" href="https://t.me/Maykop_Pushka" target="_blank" rel="noopener" data-log="telegram_hero">Написать в Telegram</a>
             <a class="v-btn v-btn--ghost" href="#ceny">Цены</a>
           </div>
         </div>
@@ -334,7 +386,7 @@
           </ul>
         </div>
         <figure class="services__fig" data-v-reveal="up" data-v-reveal-at="0.12 0.45">
-          <img src="assets/stack.webp" alt="Зимние шины на стеллаже" width="1200" height="1600" loading="lazy" decoding="async">
+          <img src="assets/client/photo3.jpg" alt="Шины на стеллажах в зале" width="800" height="789" loading="lazy" decoding="async">
           <figcaption>Шины и диски</figcaption>
         </figure>
       </div>
@@ -374,7 +426,7 @@
     <section class="v-section" data-v-act="flow" data-v-drift="#0d1016" aria-label="Что обещаем">
       <div class="v-wrap promise">
         <figure class="promise__fig" data-v-reveal="left" data-v-reveal-at="0.15 0.5">
-          <img src="assets/hands.webp" alt="Мастер за работой с шиной" width="1920" height="1067" loading="lazy" decoding="async">
+          <img src="assets/client/photo4.jpg" alt="Мастер держит колесо BMW после шиномонтажа" width="600" height="800" loading="lazy" decoding="async" style="object-position:50% 35%">
         </figure>
         <div class="v-stack" data-v-in data-v-stagger="70">
           <h2 class="v-display v-display--md">Что отмечают клиенты</h2>
@@ -397,9 +449,15 @@
             <a class="close__tel" href="tel:+79182294034">+7 918 229-40-34</a>
             <div class="book__alt">
               <span class="v-label">Или так</span>
-              <a class="v-btn v-btn--ghost" href="https://t.me/Maykop_Pushka" rel="noopener">Telegram</a>
-              <a class="v-btn v-btn--ghost" href="https://wa.me/79189282100" rel="noopener">WhatsApp</a>
-              <a class="v-btn v-btn--ghost" href="https://yandex.ru/maps?ll=40.119919%2C44.599155&mode=routes&rtext=~44.599155%2C40.119919&z=16" rel="noopener">Построить маршрут</a>
+              <a class="v-btn btn-tg" href="https://t.me/Maykop_Pushka" target="_blank" rel="noopener" data-log="telegram_contacts">Написать в Telegram</a>
+              <a class="v-btn v-btn--ghost" href="https://wa.me/79189282100" target="_blank" rel="noopener" data-log="whatsapp">WhatsApp</a>
+              <a class="v-btn v-btn--ghost" href="https://yandex.ru/maps?ll=40.119919%2C44.599155&mode=routes&rtext=~44.599155%2C40.119919&z=16" target="_blank" rel="noopener" data-log="route">Построить маршрут</a>
+            </div>
+            <div class="shots" aria-label="Фото шиномонтажа">
+              <figure><img src="assets/client/photo1.jpg" alt="Вход в шиномонтаж вечером" width="800" height="581" loading="lazy" decoding="async"></figure>
+              <figure><img src="assets/client/photo6.jpg" alt="Шиномонтаж на улице Пушкина днём" width="600" height="800" loading="lazy" decoding="async"></figure>
+              <figure><img src="assets/client/photo2.jpg" alt="Шиномонтажный станок в мастерской" width="505" height="800" loading="lazy" decoding="async"></figure>
+              <figure><img src="assets/client/photo5.jpg" alt="BMW у шиномонтажа вечером" width="600" height="800" loading="lazy" decoding="async"></figure>
             </div>
           </div>
           <div class="close__meta" data-v-in data-v-stagger="60">
@@ -409,7 +467,7 @@
           </div>
         </div>
         <footer class="foot">
-          <span>Шиномонтаж · Майкоп</span>
+          <span>Шиномонтаж «Пушка» · Майкоп, ул. Пушкина, 113</span>
           <span>Шиномонтаж, шины и диски</span>
         </footer>
       </div>
@@ -418,7 +476,38 @@
   </main>
 </div>
 
+<!-- Постоянная кнопка Telegram (на телефоне - широкая внизу) -->
+<a class="fab-tg" href="https://t.me/Maykop_Pushka" target="_blank" rel="noopener" data-log="telegram_float" aria-label="Написать в Telegram">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 3.3L2.4 10.7c-1.300.5-1.300 1.300-.2 1.600l4.900 1.500 1.900 5.800c.2.600.4.800.9.800.4 0 .6-.2.9-.4l2.300-2.200 4.800 3.500c.9.500 1.500.2 1.700-.8L22.900 4.800c.3-1.300-.5-1.900-1.300-1.500zM8.300 13.300l9.600-6c.5-.3.9-.1.5.2l-7.900 7.100-.3 3.300-1.900-4.600z"/></svg>
+  Написать в Telegram
+</a>
+
 <script src="vibe.js"></script>
+<script>
+/* Логгер: структурированные JSON-записи (уровни debug/info/warn/error).
+   Сюда же можно подключить отправку в Sentry/ELK. Телефоны и личные данные в лог не пишем. */
+var Logger = {
+  requestId: "req_" + Math.random().toString(36).slice(2, 8),
+  write: function (level, message, fn, params, error) {
+    var entry = { timestamp: new Date().toISOString(), level: level, message: message,
+      requestId: this.requestId, function: fn, params: params || {} };
+    if (error) entry.error = { name: error.name, message: error.message, stack: error.stack };
+    (console[level === "debug" ? "log" : level] || console.log)(JSON.stringify(entry));
+  },
+  debug: function (m, f, p) { this.write("debug", m, f, p); },
+  info:  function (m, f, p) { this.write("info", m, f, p); },
+  warn:  function (m, f, p) { this.write("warn", m, f, p); },
+  error: function (m, f, p, e) { this.write("error", m, f, p, e); }
+};
+window.addEventListener("error", function (e) {
+  Logger.error("Необработанная ошибка страницы", "window.onerror", { src: e.filename }, e.error || new Error(e.message));
+});
+document.addEventListener("click", function (e) {
+  var el = e.target.closest("[data-log]");
+  if (el) Logger.info("Клик по кнопке", "clickHandler", { action: el.getAttribute("data-log") });
+});
+Logger.info("Страница загружена", "init", { path: location.pathname });
+</script>
 <script>
   Vibe.mount(document.querySelector('.v-page'));
 
